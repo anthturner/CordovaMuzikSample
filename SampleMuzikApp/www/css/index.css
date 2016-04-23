@@ -1,0 +1,342 @@
+body
+{
+    background: url('tweed.png');
+    color: #dddddd;
+    padding: 5%;
+
+    font-family: Tahoma, Helvetica, Arial, Sans-Serif;
+}
+
+h4 {
+    text-shadow: 0px 2px 3px #555;
+    color: #222;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+h6 {
+    padding-top: 2px;
+    display: inline-block;
+    text-shadow: 0px 2px 3px #555;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.progress
+{
+    margin-bottom: 0px;
+    border-radius: 4px 2px 2px 4px;
+    border: 1px solid #fff;
+}
+.progress:after
+{
+	position:absolute;
+	content:"";
+	width:4px;
+	height:14px;
+	right:11px;
+	top:calc(50% - 7px);
+	background:#f5f5f5;
+    border-radius: 0px 3px 3px 0px;
+	border-width:2px 2px 2px 0;
+}
+
+.letterpress-box
+{
+  background: #1A1A1A;
+ 
+  /* inset shadow 1px horizontal/vertical, 2px blur, 0 spread, #color */
+  -webkit-box-shadow: inset 1px 1px 2px 0px #0D0D0D;
+  -moz-box-shadow: inset 1px 1px 2px 0px #0D0D0D;
+  box-shadow: inset 1px 1px 2px 0px #0D0D0D;
+ 
+  /* border for edge, 1px solid #color */
+  border-bottom:1px solid #36383D;
+  border-right:1px solid #36383D;
+}
+
+.headsetCup
+{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,45484d+100 */
+background: #000000; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #000000 0%, #45484d 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #000000 0%,#45484d 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #000000 0%,#45484d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    position: relative;
+    border: 5px solid #333333;
+    border-radius: 50%;
+
+    height: 160px;
+    width: 160px;
+}
+.headsetCup #topIndicator
+{
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 6px);
+}
+.headsetCup #leftIndicator
+{
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 15px;
+}
+.headsetCup #bottomIndicator
+{
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 6px);
+}
+.headsetCup #rightIndicator
+{
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 15px;
+}
+
+.swipeArrows
+{
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+}
+#leftArrow
+{
+    right: 15px;
+    top: calc(50% - 15px);
+}
+#rightArrow
+{
+    left: 15px;
+    top: calc(50% - 15px);
+}
+#upArrow
+{
+    bottom: 15px;
+    left: calc(50% - 8px);
+}
+#downArrow
+{
+    top: 15px;
+    left: calc(50% - 8px);
+}
+
+.led
+{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px;
+}
+
+.led-red {
+    background-color: #400;
+}
+.led-red-on {
+    background-color: #940;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+}
+
+.led-yellow {
+    background-color: #540;
+}
+.led-yellow-on {
+    background-color: #A90;
+    box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
+}
+
+.led-green {
+    background-color: #140;
+}
+.led-green-on {
+    background-color: #690;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+.led-green-blink {
+    -moz-animation: blinkGreen 0.5s 5;
+    -webkit-animation: blinkGreen 0.5s 5;
+    animation: blinkGreen 0.5s 5;
+}
+
+.led-blue {
+    background-color: #056;
+}
+.led-blue-on {
+    background-color: #4AB;
+    box-shadow: #000 0 -1px 7px 1px, inset #006 0 -1px 9px, #06F 0 2px 14px;
+}
+
+.flyLeft {
+    -moz-animation: flyLeft 1s 1;
+    -webkit-animation: flyLeft 1s 1;
+    animation: flyLeft 1s 1;
+}
+
+.flyRight {
+    -moz-animation: flyRight 1s 1;
+    -webkit-animation: flyRight 1s 1;
+    animation: flyRight 1s 1;
+}
+
+.flyUp {
+    -moz-animation: flyUp 1s 1;
+    -webkit-animation: flyUp 1s 1;
+    animation: flyUp 1s 1;
+}
+.flyFastUp {
+    -moz-animation: flyUp 0.5s 1;
+    -webkit-animation: flyUp 0.5s 1;
+    animation: flyUp 0.5s 1;
+    color: #0094ff;
+}
+
+.flyDown {
+    -moz-animation: flyDown 1s 1;
+    -webkit-animation: flyDown 1s 1;
+    animation: flyDown 1s 1;
+}
+.flyFastDown {
+    -moz-animation: flyDown 0.5s 1;
+    -webkit-animation: flyDown 0.5s 1;
+    animation: flyDown 0.5s 1;
+    color: #0094ff;
+}
+
+@keyframes blinkGreen
+{
+    0%
+    {
+        background-color: #140;
+        box-shadow: #000 0 -1px 7px 1px;
+    }
+    50%
+    {
+        background-color: #690;
+        box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+    }
+    100%
+    {
+        background-color: #140;
+        box-shadow: #000 0 -1px 7px 1px;
+    }
+}
+
+@keyframes flyLeft
+{
+    0% {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        -moz-transform: translateX(-850%);
+        -ms-transform: translateX(-850%);
+        -webkit-transform: translateX(-850%);
+        transform: translateX(-850%);
+        opacity: 0;
+    }
+}
+
+@keyframes flyRight
+{
+    0% {
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        -moz-transform: translateX(850%);
+        -ms-transform: translateX(850%);
+        -webkit-transform: translateX(850%);
+        transform: translateX(850%);
+        opacity: 0;
+    }
+}
+
+@keyframes flyUp
+{
+    0% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        -moz-transform: translateY(-600%);
+        -ms-transform: translateY(-600%);
+        -webkit-transform: translateY(-600%);
+        transform: translateY(-600%);
+        opacity: 0;
+    }
+}
+
+@keyframes flyDown
+{
+    0% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        -moz-transform: translateY(600%);
+        -ms-transform: translateY(600%);
+        -webkit-transform: translateY(600%);
+        transform: translateY(600%);
+        opacity: 0;
+    }
+}
+
+@media screen and (orientation: portrait) {
+}
+
+@media screen and (orientation: landscape) {
+}

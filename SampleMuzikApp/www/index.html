@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Muzik Dashboard</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="margin-bottom:20px;">
+                <img class="center-block" src="css/muzikLogo_sm.png" />
+            </div>
+            <div id="statusMessageContainer" class="row">
+            <!--<div id="statusMessageContainer" class="row" style="display: none;">-->
+                <h4 id="statusMessage" class="text-center">Loading...</h4>
+            </div>
+            <div id="dashboard" style="display: none;">
+            <!--<div id="dashboard">-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span id="chargingIcon" style="padding-top: 2px; padding-right: 2px;" class="pull-left glyphicon glyphicon-flash"></span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" id="batteryLevel" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">40%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-xs-6">
+                        <div class="headsetCup">
+                            <div id="topIndicator" class="led led-green"></div>
+                            <div id="leftIndicator" class="led led-green"></div>
+                            <div id="rightIndicator" class="led led-green"></div>
+                            <div id="bottomIndicator" class="led led-green"></div>
+                            <img src="css/logoSymbol.png" style="position:absolute;left:calc(50% - 28px);top:calc(50% - 28px);" />
+
+                            <div id="leftArrow" class="swipeArrows" style="text-align: right;"><span class="glyphicon glyphicon-arrow-left"></span></div>
+                            <div id="rightArrow" class="swipeArrows" style="text-align: left;"><span class="glyphicon glyphicon-arrow-right"></span></div>
+                            <div id="upArrow" class="swipeArrows" style="text-align: center;"><span class="glyphicon glyphicon-arrow-up"></span></div>
+                            <div id="downArrow" class="swipeArrows" style="text-align: center;"><span class="glyphicon glyphicon-arrow-down"></span></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div style="margin-left: 15px;">
+                            <div><div id="movingIndicator" class="headMotions led led-blue"></div><h6>Moving</h6></div>
+                            <div><div id="verticalIndicator" class="headMotions led led-blue"></div><h6>Vertical</h6></div>
+                            <div><div id="stillIndicator" class="headMotions led led-blue"></div><h6>Still</h6></div>
+                            <div><div id="walkingIndicator" class="headMotions led led-blue"></div><h6>Walking</h6></div>
+                            <div><div id="bobbingIndicator" class="headMotions led led-blue"></div><h6>Bobbing</h6></div>
+                            <div><div id="otherIndicator" class="headMotions led led-blue"></div><h6>Other</h6></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="row">
+                        <div class="col-xs-2">X</div>
+                        <div class="col-xs-4" id="accelX"></div>
+                        <div class="col-xs-2">Y</div>
+                        <div class="col-xs-4" id="accelY"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">Z</div>
+                        <div class="col-xs-4" id="accelZ"></div>
+                        <div class="col-xs-2">Norm</div>
+                        <div class="col-xs-4" id="accelNorm"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">Fwd&ang;</div>
+                        <div class="col-xs-4" id="accelFwdAngle"></div>
+                        <div class="col-xs-2">Side&ang;</div>
+                        <div class="col-xs-4" id="accelSideAngle"></div>
+                    </div>
+                </div>
+                <div class="row letterpress-box" style="margin-top: 20px; padding: 8px;">
+                    <div class="row">
+                        <div class="col-xs-6">Serial #</div>
+                        <div class="col-xs-6" id="serialNumber">1234-567-890</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Firmware Ver.</div>
+                        <div class="col-xs-6" id="firmwareVersion">0.0.0</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Hardware Ver.</div>
+                        <div class="col-xs-6" id="hardwareVersion">0.0.0</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Library Ver.</div>
+                        <div class="col-xs-6" id="libraryVersion">0.0.0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    </body>
+</html>

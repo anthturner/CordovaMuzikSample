@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-muzik"
+    version="0.0.1">
+    
+    <name>Muzik</name>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+	<js-module src="www/muzik.js" name="Muzik">
+		<clobbers target="muzik" />
+	</js-module>
+	
+	    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MuzikPlugin">
+                <param name="android-package" value="com.muzik.androidplugin.MuzikPlugin"/>
+                <param name ="onload" value="true"/>
+            </feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+		</config-file>
+        
+        <source-file src="src/android/MuzikPlugin.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/MzConnectionStateBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/SerialNumberBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/FirmwareVersionBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/HardwareVersionBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/ManufacturerBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/GestureBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/BluetoothLocalNameBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/MspVersionBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/BatteryLevelBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/ChargeStatusBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/AccelerometerBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/AutoPlayBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <source-file src="src/android/MotionBridge.java" target-dir="src/com/muzik/androidplugin" />
+        <lib-file src="src/android/mza-2.0.0.jar" target-dir="libs" />
+        
+    </platform>
+	
+    <!-- ios -->
+    <platform name="ios">
+        
+        <config-file target="config.xml" parent="/*">
+            <feature name="MuzikPlugin">
+                <param name="ios-package" value="MuzikPlugin"/>
+                <param name ="onload" value="true"/>
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/MzAccessory.h" target-dir="src" />
+        <header-file src="src/ios/MuzikPlugin.h" target-dir="src" />
+        <source-file src="src/ios/MuzikPlugin.m" target-dir="src" />
+        <source-file src="src/ios/libMZAccessory.a" framework="true" target-dir="lib" />
+        <framework src="CoreTelephony.framework" />
+        
+    </platform>
+
+</plugin>
